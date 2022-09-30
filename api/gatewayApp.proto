@@ -1,0 +1,24 @@
+syntax = "proto3";
+package gatewayApp;
+option go_package = "github.com/MathPoem/gatewayApp/pkg";
+
+import "google/api/annotations.proto";
+
+message RequestINN {
+  uint64 inn = 1;
+}
+
+message ResponseORG {
+  uint64 inn = 1;
+  string kpp = 2;
+  string name = 3;
+  string head = 4;
+}
+
+service GatewayService {
+  rpc FindORG(RequestINN) returns(ResponseORG) {
+    option (google.api.http) = {
+      get: "/organization/{inn}"
+    };
+  }
+}
