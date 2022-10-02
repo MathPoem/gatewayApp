@@ -38,8 +38,7 @@
             "name": "inn",
             "in": "path",
             "required": true,
-            "type": "string",
-            "format": "uint64"
+            "type": "string"
           }
         ],
         "tags": [
@@ -53,8 +52,7 @@
       "type": "object",
       "properties": {
         "inn": {
-          "type": "string",
-          "format": "uint64"
+          "type": "string"
         },
         "kpp": {
           "type": "string"

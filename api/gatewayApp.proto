@@ -5,11 +5,11 @@ option go_package = "github.com/MathPoem/gatewayApp/pkg";
 import "google/api/annotations.proto";
 
 message RequestINN {
-  uint64 inn = 1;
+  string inn = 1;
 }
 
 message ResponseORG {
-  uint64 inn = 1;
+  string inn = 1;
   string kpp = 2;
   string name = 3;
   string head = 4;
